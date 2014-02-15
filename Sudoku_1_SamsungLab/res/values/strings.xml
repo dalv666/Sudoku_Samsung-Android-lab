@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sudoku_Samsung-lab</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="back">Назад</string>
+    <string name="clean">Очистить</string>
+    <string name="check">Проверить</string>
+	<string name="chooseLvl">Выберите кол-во подсказок</string>
+	<string name="confirmLvl">Стартуем</string>
+	<string name="correct">Верняк</string>
+	<string name="incorrect">Ошибочка вышла</string>
+	<string name="notFill">Поле-то не заполнено</string>
+</resources>
