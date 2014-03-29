@@ -4,19 +4,19 @@ import java.util.Random;
 
 
 public class Sudoku {
-	Random random = new Random();
-	int gridTable[][];
-	int n = 3;
+	private Random random = new Random();
+	private int mGridTable[][];
+	private int n = 3;
 
 	public int[][] getGridTable() {
-		return gridTable;
+		return mGridTable;
 	}
 
 	public void makeGrid() {
-		this.gridTable = new int[9][9];
+		this.mGridTable = new int[9][9];
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
-				gridTable[i][j] = (i * n + i / n + j) % (n * n) + 1;
+				mGridTable[i][j] = (i * n + i / n + j) % (n * n) + 1;
 			}
 		}
 	}
@@ -24,7 +24,7 @@ public class Sudoku {
 	public void show() {
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
-				System.out.print(gridTable[i][j] + " ");
+				System.out.print(mGridTable[i][j] + " ");
 			}
 			System.out.println();
 		}
@@ -33,9 +33,9 @@ public class Sudoku {
 	public void transposing() {
 		for (int i = 0; i < n * n; i++) {
 			for (int j = i; j < n * n; j++) {
-				int temp = gridTable[i][j];
-				gridTable[i][j] = gridTable[j][i];
-				gridTable[j][i] = temp;
+				int temp = mGridTable[i][j];
+				mGridTable[i][j] = mGridTable[j][i];
+				mGridTable[j][i] = temp;
 			}
 		}
 	}
@@ -58,9 +58,9 @@ public class Sudoku {
 
 	public void changeLines(int from, int to) {
 		for (int i = 0; i < 9; i++) {
-			int temp = gridTable[from][i];
-			gridTable[from][i] = gridTable[to][i];
-			gridTable[to][i] = temp;
+			int temp = mGridTable[from][i];
+			mGridTable[from][i] = mGridTable[to][i];
+			mGridTable[to][i] = temp;
 		}
 
 	}
@@ -135,12 +135,12 @@ public class Sudoku {
 			int yRandomPosition = random.nextInt(9);
 			if (checkedPosition[xRandomPosition][yRandomPosition] == 0) {
 				// не проверяли
-				int temp = gridTable[xRandomPosition][yRandomPosition];
-				gridTable[xRandomPosition][yRandomPosition] = 0;
+				int temp = mGridTable[xRandomPosition][yRandomPosition];
+				mGridTable[xRandomPosition][yRandomPosition] = 0;
 				beginDiffucult++;
 				checkedPosition[xRandomPosition][yRandomPosition] = temp;
 			}
 		}
-		return this.gridTable;
+		return this.mGridTable;
 	}
 }

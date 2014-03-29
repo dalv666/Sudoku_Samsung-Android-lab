@@ -2,10 +2,8 @@ package com.example.sudoku_1_samsunglab;
 
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,7 +11,7 @@ import android.widget.Button;
 
 public class NumBoardActivity extends FragmentActivity implements OnClickListener{
 
-	boolean isEmpty;
+	private boolean isEmpty;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
