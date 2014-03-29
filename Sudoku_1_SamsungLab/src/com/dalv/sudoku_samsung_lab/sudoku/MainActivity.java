@@ -1,4 +1,4 @@
-package com.example.sudoku_1_samsunglab;
+package com.dalv.sudoku_samsung_lab.sudoku;
 
 import java.util.BitSet;
 
@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dalv.sudoku_samsung_lab.sudokuGenerator.Sudoku;
+import com.example.sudoku_1_samsunglab.R;
 
 @SuppressLint("NewApi")
 public class MainActivity extends FragmentActivity implements OnClickListener {

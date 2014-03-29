@@ -1,5 +1,7 @@
-package com.example.sudoku_1_samsunglab;
+package com.dalv.sudoku_samsung_lab.sudoku;
 
+
+import com.example.sudoku_1_samsunglab.R;
 
 import android.content.Intent;
 import android.os.Bundle;
